@@ -3,7 +3,7 @@
 }
 
 .kills {
-  font: 800 70px system-ui;
+  font: 800 50px system-ui;
   content: counter(count);
   animation: counter 5s linear infinite alternate;
   counter-reset: count 0;
@@ -58,8 +58,8 @@
 
 .button {
   display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
+  padding: 15px 15px;
+  font-size: 15px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -84,8 +84,8 @@
 
 .button2 {
   display: inline-block;
-  padding: 15px 25px;
-  font-size: 18px;
+  padding: 15px 15px;
+  font-size: 13px;
   cursor: pointer;
 
   text-decoration: none;
@@ -110,8 +110,8 @@
 
 .button3 {
   display: inline-block;
-  padding: 15px 25px;
-  font-size: 40px;
+  padding: 15px 15px;
+  font-size: 25px;
   cursor: pointer;
 
   text-decoration: none;
@@ -135,8 +135,8 @@
 }
 
 .info {
-  font-size: 40px;
-  color: #fff;
-  -webkit-text-stroke-width: 2px;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke-width: 0.2px;
   -webkit-text-stroke-color: rgb(0, 0, 0);
 }

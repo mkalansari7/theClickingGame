@@ -10,6 +10,14 @@ const Home = () => {
   const [superP, setSuperP] = useState(gun * 1000);
   const [gauge, setGauge] = useState(0);
 
+  const buyCharm = () => {
+    setInterval(() => {
+      setCurrency((currency) => currency + charm);
+    }, 1000);
+    setCharm(charm + 1);
+    setCurrency(currency - skillCost);
+  };
+
   const killingMonsters = () => {
     setMonsters(monsters + gun);
     getCurrency();
@@ -42,13 +50,6 @@ const Home = () => {
     setGauge(gauge + 1);
   };
 
-  // const buyCharm = () => {
-  //   setInterval(() => {
-  //     setCurrency(currency + charm);
-  //   }, 1000);
-  //   setCharm(charm + 2);
-  // };
-
   const useSuper = () => {
     setMonsters(monsters + superP);
     setGauge(0);
@@ -74,14 +75,14 @@ const Home = () => {
           Double Currency Earnings
         </button>
       )}
-      {/* {currency > skillCost && (
+      {currency > skillCost && (
         <button className="button2" onClick={buyCharm}>
           Buy a Charm
         </button>
-      )} */}
+      )}
       <div className="info">{`Gun level = ${gun}`}</div>
       <div className="info">{`Currency earning in each shot = ${skill}`}</div>
-      <div></div>
+      <div className="info">{`Currency earning every second = ${charm}`}</div>
       {gauge >= 5 && (
         <button className="button3" onClick={useSuper}>
           SUPER CANNON!
